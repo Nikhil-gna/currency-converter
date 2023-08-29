@@ -51,17 +51,21 @@ export default function App() {
   }
   return (
      <>
+        
         <StatusBar/>
+       
         <View style={styles.container}>
           <View style={styles.topContainer}>
            <View style={styles.rupeesContainer}>
               <Text style={styles.rupee}>₹</Text>
               <TextInput
+                style={styles.inputAmountField}
                 maxLength={14}
                 value={inputValue}
                 clearButtonMode='always'
                 onChangeText={setInputValue}
                 placeholder='Enter amount in Rupees'
+                placeholderTextColor='black'
                 keyboardType="numeric"
 
               />
@@ -91,14 +95,18 @@ export default function App() {
           </View>
 
         </View>
+     
      </>
   )
 }
 
 const styles = StyleSheet.create({
+  bg: {
+    // backgroundColor: '#515151',
+  },
   container: {
     flex: 1,
-    backgroundColor: '#515151',
+    backgroundColor: '#D8D8D8',
   },
   topContainer: {
     flex: 1,
@@ -107,14 +115,13 @@ const styles = StyleSheet.create({
   },
   resultTxt: {
     fontSize: 32,
-    color: '#000000',
+    color: '#2d3436',
     fontWeight: '800',
   },
   rupee: {
     marginRight: 8,
-
     fontSize: 22,
-    color: '#000000',
+    color: '#2d3436',
     fontWeight: '800',
   },
   rupeesContainer: {
@@ -126,8 +133,10 @@ const styles = StyleSheet.create({
     width: 200,
     padding: 8,
     borderWidth: 1,
-    borderRadius: 4,
-    backgroundColor: '#FFFFFF',
+    borderRadius: 15,
+    backgroundColor: '#fff',
+    borderColor: '#2d3436',
+    color: '#2d3436',
   },
   bottomContainer: {
     flex: 3,
@@ -150,7 +159,7 @@ const styles = StyleSheet.create({
     shadowRadius: 1,
   },
   selected: {
-    backgroundColor: '#ffeaa7',
+    backgroundColor: '#9BABB8',
   },
   btnText: {
     fontSize: 20,
